@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danda · Corretora de Imóveis — Zona Leste de São Paulo</title>
+<meta name="description" content="Compra, venda e locação de imóveis na Zona Leste de São Paulo com atendimento personalizado. Especialista em Minha Casa Minha Vida. Fale com a Danda pelo WhatsApp.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --cream:#F7F2EA;
+  --cream-2:#FBF8F2;
+  --paper:#FFFFFF;
+  --ink:#211C16;
+  --ink-soft:#52493D;
+  --line:#E7DECF;
+  --gold:#B68A3E;
+  --gold-2:#C9A24A;
+  --gold-soft:#E7D2A4;
+  --graphite:#1C1A17;
+  --graphite-2:#26231E;
+  --wa:#25D366;
+  --shadow:0 24px 60px -28px rgba(33,28,22,.45);
+  --shadow-sm:0 12px 30px -18px rgba(33,28,22,.4);
+  --maxw:1180px;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Archivo',sans-serif;line-height:1.05;letter-spacing:-.01em;color:var(--ink)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* Eyebrow with brand arc */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:'Inter';font-weight:600;font-size:.78rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:34px;height:8px;border-bottom:1.5px solid var(--gold);border-radius:0 0 40px 40px;transform:translateY(-3px)}
+.eyebrow.center{justify-content:center}
+.eyebrow.center::after{content:"";width:34px;height:8px;border-bottom:1.5px solid var(--gold);border-radius:0 0 40px 40px;transform:translateY(-3px)}
+
+.section-title{font-size:clamp(1.9rem,4.2vw,3rem);font-weight:800;text-transform:uppercase}
+.section-title .accent{color:var(--gold)}
+.lead{color:var(--ink-soft);font-size:1.05rem;max-width:620px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Inter';font-weight:600;font-size:.95rem;
+  padding:15px 26px;border-radius:999px;cursor:pointer;border:1.5px solid transparent;transition:.25s ease;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gold{background:linear-gradient(120deg,var(--gold-2),var(--gold));color:#fff;box-shadow:0 14px 26px -14px rgba(182,138,62,.8)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 20px 34px -14px rgba(182,138,62,.9)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 14px 26px -14px rgba(37,211,102,.7)}
+.btn-wa:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.btn-outline{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-outline:hover{background:var(--ink);color:var(--cream)}
+.btn-ghost-gold{background:transparent;border-color:var(--gold);color:var(--gold)}
+.btn-ghost-gold:hover{background:var(--gold);color:#fff}
+
+/* ---------- HEADER ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:80;transition:.3s ease;
+  background:rgba(247,242,234,.0);padding:18px 0}
+header.scrolled{background:rgba(248,245,239,.92);backdrop-filter:blur(12px);
+  box-shadow:0 1px 0 var(--line);padding:10px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{height:54px;width:auto;transition:.3s}
+header.scrolled .brand img{height:44px}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{font-weight:500;font-size:.92rem;color:var(--ink);position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--gold);transition:.25s}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding-top:140px;background:
+  radial-gradient(120% 80% at 80% 0%, #FCEFD6 0%, rgba(252,239,214,0) 55%),
+  linear-gradient(180deg,var(--cream-2),var(--cream))}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:end}
+.hero-copy{padding-bottom:70px;max-width:560px}
+.hero h1{font-size:clamp(2.8rem,6.5vw,5rem);font-weight:900;text-transform:uppercase;line-height:.92}
+.hero h1 .line2{color:var(--gold);display:block}
+.hero p.sub{margin:22px 0 26px;color:var(--ink-soft);font-size:1.12rem;max-width:440px}
+.hero-benefits{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
+.hero-benefits li{display:flex;align-items:center;gap:12px;font-weight:500;color:var(--ink)}
+.hero-benefits .tick{width:24px;height:24px;flex:none;border-radius:50%;border:1.5px solid var(--gold);
+  display:grid;place-items:center;color:var(--gold)}
+.hero-benefits .tick svg{width:13px;height:13px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-media{position:relative;height:560px}
+.hero-media::before{content:"";position:absolute;inset:auto 0 0 0;height:70%;
+  background:linear-gradient(180deg,rgba(247,242,234,0),var(--cream-2));z-index:2;pointer-events:none}
+.hero-media::after{content:"";position:absolute;left:-6%;top:8%;width:64%;height:64%;
+  border:1.5px solid var(--gold-soft);border-radius:0 0 240px 240px;z-index:0}
+.hero-media img{position:relative;z-index:1;height:100%;width:100%;object-fit:cover;object-position:top center;
+  -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent);mask-image:linear-gradient(180deg,#000 78%,transparent)}
+
+/* ---------- SERVICE STRIP ---------- */
+.services{position:relative;z-index:5;margin-top:-46px}
+.services-card{background:var(--paper);border-radius:20px;box-shadow:var(--shadow);
+  display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.svc{padding:34px 26px;text-align:center;border-right:1px solid var(--line);transition:.25s}
+.svc:last-child{border-right:0}
+.svc:hover{background:var(--cream-2)}
+.svc .ic{width:54px;height:54px;margin:0 auto 16px;color:var(--gold)}
+.svc h3{font-size:1rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.svc p{font-size:.9rem;color:var(--ink-soft)}
+
+/* ---------- STATS ---------- */
+.stats{padding:64px 0 18px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat .num{font-family:'Archivo';font-weight:800;font-size:clamp(2.2rem,5vw,3.1rem);color:var(--gold);line-height:1}
+.stat .lbl{font-size:.86rem;color:var(--ink-soft);margin-top:6px;text-transform:uppercase;letter-spacing:.08em}
+.stat{padding:14px 8px;position:relative}
+.stat:not(:last-child)::after{content:"";position:absolute;right:0;top:18%;height:64%;width:1px;background:var(--line)}
+
+/* ---------- SECTION SHELL ---------- */
+.section{padding:96px 0}
+.section.tint{background:var(--cream-2)}
+.head-center{text-align:center;max-width:680px;margin:0 auto 56px}
+.head-center .lead{margin:16px auto 0}
+
+/* ---------- IMÓVEIS ---------- */
+.props-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prop-card{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);
+  cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;display:flex;flex-direction:column}
+.prop-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.prop-thumb{position:relative;aspect-ratio:4/3;overflow:hidden}
+.prop-thumb img{width:100%;height:100%;object-fit:cover;transition:.5s ease}
+.prop-card:hover .prop-thumb img{transform:scale(1.07)}
+.badge{position:absolute;top:12px;left:12px;background:var(--gold);color:#fff;font-weight:600;
+  font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;z-index:2}
+.prop-thumb .count{position:absolute;bottom:12px;right:12px;background:rgba(28,26,23,.78);color:#fff;
+  font-size:.74rem;font-weight:500;padding:5px 10px;border-radius:999px;display:flex;align-items:center;gap:6px;z-index:2}
+.prop-thumb .count svg{width:13px;height:13px}
+.prop-body{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
+.prop-body h3{font-size:1.05rem;text-transform:uppercase;letter-spacing:.02em}
+.prop-loc{display:flex;align-items:center;gap:6px;color:var(--ink-soft);font-size:.84rem;margin:6px 0 14px}
+.prop-loc svg{width:14px;height:14px;color:var(--gold);flex:none}
+.prop-specs{display:flex;gap:14px;flex-wrap:wrap;font-size:.8rem;color:var(--ink-soft);
+  border-top:1px solid var(--line);padding-top:14px;margin-top:auto}
+.prop-specs span{display:flex;align-items:center;gap:5px}
+.prop-specs svg{width:15px;height:15px;color:var(--gold)}
+.prop-price{font-family:'Archivo';font-weight:800;font-size:1.18rem;color:var(--ink);margin:14px 0 12px}
+.prop-price small{display:block;font-family:'Inter';font-weight:500;font-size:.72rem;color:var(--gold);
+  text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.prop-more{display:flex;align-items:center;gap:7px;color:var(--gold);font-weight:600;font-size:.86rem}
+.prop-more svg{width:15px;height:15px;transition:.25s}
+.prop-card:hover .prop-more svg{transform:translateX(4px)}
+.props-foot{text-align:center;margin-top:44px}
+
+/* ---------- SOBRE ---------- */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{border-radius:0 0 200px 200px;box-shadow:var(--shadow);width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top}
+.about-photo .frame{position:absolute;inset:18px 18px -18px -18px;border:1.5px solid var(--gold-soft);
+  border-radius:0 0 200px 200px;z-index:-1}
+.about h2{font-family:'Fraunces',serif;font-weight:400;text-transform:none;letter-spacing:-.02em;
+  font-size:clamp(2rem,4.5vw,2.8rem);line-height:1.08}
+.about h2 em{font-style:italic;color:var(--gold)}
+.about p{color:var(--ink-soft);margin-top:18px;font-size:1.04rem}
+.about .signed{font-family:'Fraunces',serif;font-style:italic;font-size:1.5rem;color:var(--gold);margin-top:22px}
+.about .creci{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:var(--ink-soft);
+  margin-top:6px;letter-spacing:.04em}
+.about-actions{margin-top:28px}
+
+/* ---------- DIFERENCIAIS ---------- */
+.why{background:var(--cream-2)}
+.why-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:60px;align-items:start}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:34px 40px}
+.why-item .ic{width:46px;height:46px;color:var(--gold);margin-bottom:14px}
+.why-item h4{font-size:1rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.why-item p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ---------- PROCESSO ---------- */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;position:relative;margin-top:20px}
+.steps::before{content:"";position:absolute;top:28px;left:8%;right:8%;height:1.5px;
+  background:linear-gradient(90deg,var(--gold-soft),var(--gold),var(--gold-soft));z-index:0}
+.step{text-align:center;position:relative;z-index:1}
+.step .dot{width:56px;height:56px;margin:0 auto 16px;border-radius:50%;background:var(--paper);
+  border:1.5px solid var(--gold);color:var(--gold);font-family:'Archivo';font-weight:800;font-size:1.2rem;
+  display:grid;place-items:center;box-shadow:var(--shadow-sm)}
+.step h4{font-size:.92rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:5px}
+.step p{font-size:.8rem;color:var(--ink-soft)}
+
+/* ---------- SIMULADOR ---------- */
+.sim{background:var(--graphite);color:#EFE7D8}
+.sim .eyebrow{color:var(--gold-2)}
+.sim h2{color:#fff}
+.sim .lead{color:#C9BFAD}
+.sim-card{background:var(--graphite-2);border:1px solid #34302a;border-radius:20px;padding:34px;margin-top:36px;
+  display:grid;grid-template-columns:repeat(4,1fr) auto;gap:18px;align-items:end}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-2);font-weight:600}
+.field select,.field input{background:#15130f;border:1px solid #3a352e;color:#fff;border-radius:10px;
+  padding:13px 14px;font-family:'Inter';font-size:.95rem;width:100%}
+.field select:focus,.field input:focus{outline:none;border-color:var(--gold)}
+.sim-card .btn{width:100%;justify-content:center;height:48px}
+.sim-note{font-size:.82rem;color:#9c9384;margin-top:16px;text-align:center}
+
+/* ---------- DEPOIMENTOS ---------- */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi{background:var(--paper);border-radius:var(--r);padding:28px;box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;gap:14px}
+.stars{color:var(--gold);letter-spacing:3px;font-size:1rem}
+.testi p{color:var(--ink-soft);font-size:.96rem;font-style:italic}
+.testi .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.testi .av{width:42px;height:42px;border-radius:50%;background:var(--gold-soft);color:var(--gold);
+  display:grid;place-items:center;font-family:'Archivo';font-weight:700;font-size:1rem}
+.testi .who b{display:block;font-size:.92rem;color:var(--ink)}
+.testi .who small{color:var(--ink-soft);font-size:.78rem}
+
+/* ---------- INSTAGRAM ---------- */
+.ig{background:var(--cream-2)}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px}
+.ig-tile{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;display:block}
+.ig-tile img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.ig-tile:hover img{transform:scale(1.08)}
+.ig-tile .ov{position:absolute;inset:0;background:rgba(28,26,23,.0);display:grid;place-items:center;transition:.3s}
+.ig-tile:hover .ov{background:rgba(28,26,23,.5)}
+.ig-tile .ov svg{width:30px;height:30px;color:#fff;opacity:0;transform:scale(.6);transition:.3s}
+.ig-tile:hover .ov svg{opacity:1;transform:scale(1)}
+.ig-handle{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-weight:600;margin-top:24px}
+.ig-handle svg{width:18px;height:18px}
+
+/* ---------- FAQ ---------- */
+.faq-wrap{max-width:780px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;background:none;border:0;text-align:left;cursor:pointer;padding:22px 0;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Archivo';
+  font-weight:600;font-size:1.05rem;color:var(--ink)}
+.faq-q .pm{width:28px;height:28px;flex:none;border:1.5px solid var(--gold);border-radius:50%;color:var(--gold);
+  display:grid;place-items:center;transition:.3s;font-size:1.2rem;line-height:1}
+.faq-item.open .pm{transform:rotate(45deg);background:var(--gold);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 0 22px;color:var(--ink-soft)}
+
+/* ---------- CTA FINAL ---------- */
+.cta{background:var(--graphite);color:#EFE7D8;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;right:-10%;top:-30%;width:60%;height:160%;
+  background:radial-gradient(circle,rgba(182,138,62,.18),transparent 60%)}
+.cta-grid{display:grid;grid-template-columns:.7fr 1.4fr .9fr;gap:40px;align-items:center;position:relative;z-index:1}
+.cta-photo img{border-radius:0 0 160px 160px;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;
+  border:1px solid #3a352e}
+.cta-mid .eyebrow{color:var(--gold-2)}
+.cta-mid h2{color:#fff;font-size:clamp(1.7rem,3.6vw,2.5rem);text-transform:uppercase}
+.cta-mid h2 .accent{color:var(--gold)}
+.cta-mid p{color:#C9BFAD;margin:14px 0 18px;max-width:440px}
+.cta-points{list-style:none;display:flex;flex-direction:column;gap:10px}
+.cta-points li{display:flex;align-items:center;gap:10px;font-size:.95rem}
+.cta-points .tick{color:var(--gold)}
+.cta-right{text-align:center}
+.cta-right .ring{width:78px;height:78px;margin:0 auto 18px;border-radius:50%;border:1.5px solid var(--gold);
+  color:var(--gold);display:grid;place-items:center}
+.cta-right .ring svg{width:34px;height:34px}
+.cta-right h3{color:#fff;text-transform:uppercase;font-size:1.1rem;margin-bottom:18px;line-height:1.2}
+
+/* ---------- FOOTER ---------- */
+footer{background:#15130f;color:#A89E8D;padding:60px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;align-items:start}
+.foot-brand img{height:60px;filter:brightness(0) invert(1);opacity:.92;margin-bottom:16px}
+.foot-brand p{font-size:.9rem;max-width:300px}
+.foot-col h4{color:#fff;text-transform:uppercase;font-size:.86rem;letter-spacing:.1em;margin-bottom:16px}
+.foot-col a,.foot-col span{display:flex;align-items:center;gap:10px;font-size:.92rem;margin-bottom:12px;color:#A89E8D}
+.foot-col a:hover{color:var(--gold-2)}
+.foot-col svg{width:16px;height:16px;color:var(--gold);flex:none}
+.foot-bottom{border-top:1px solid #2a2620;margin-top:44px;padding-top:22px;display:flex;
+  justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:#7d7567}
+
+/* ---------- FLOATING ---------- */
+.wa-float{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:var(--wa);
+  display:grid;place-items:center;z-index:70;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);
+  animation:pulse 2.4s infinite}
+.wa-float svg{width:32px;height:32px;color:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.to-top{position:fixed;right:24px;bottom:92px;width:46px;height:46px;border-radius:50%;background:var(--ink);
+  color:var(--cream);display:grid;place-items:center;z-index:69;cursor:pointer;border:0;opacity:0;
+  pointer-events:none;transition:.3s;transform:translateY(10px)}
+.to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.to-top svg{width:20px;height:20px}
+
+/* ---------- MODAL ---------- */
+.modal{position:fixed;inset:0;z-index:120;display:none;background:rgba(20,17,13,.86);backdrop-filter:blur(6px)}
+.modal.open{display:block}
+.modal-box{position:absolute;inset:0;display:flex;flex-direction:column;max-width:1240px;margin:0 auto;
+  background:var(--cream);box-shadow:0 0 80px rgba(0,0,0,.5);animation:popin .35s ease}
+@keyframes popin{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+.modal-close{position:absolute;top:16px;right:16px;z-index:10;width:46px;height:46px;border-radius:50%;
+  background:rgba(255,255,255,.92);border:0;cursor:pointer;display:grid;place-items:center;box-shadow:var(--shadow-sm)}
+.modal-close svg{width:20px;height:20px;color:var(--ink)}
+.modal-scroll{overflow-y:auto;flex:1}
+.gallery{position:relative;background:#0e0c0a;aspect-ratio:16/9;max-height:54vh}
+.gallery .main{width:100%;height:100%;object-fit:contain}
+.gnav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.9);border:0;cursor:pointer;display:grid;place-items:center;z-index:3}
+.gnav:hover{background:#fff}
+.gnav svg{width:22px;height:22px;color:var(--ink)}
+.gnav.prev{left:16px}.gnav.next{right:16px}
+.gallery .gcount{position:absolute;bottom:16px;left:16px;background:rgba(20,17,13,.7);color:#fff;
+  font-size:.8rem;padding:6px 12px;border-radius:999px;z-index:3}
+.thumbs{display:flex;gap:8px;padding:12px 20px;overflow-x:auto;background:#fff;border-bottom:1px solid var(--line)}
+.thumbs img{width:88px;height:62px;object-fit:cover;border-radius:8px;cursor:pointer;flex:none;
+  opacity:.55;border:2px solid transparent;transition:.2s}
+.thumbs img.active{opacity:1;border-color:var(--gold)}
+.modal-info{padding:30px clamp(20px,4vw,46px) 120px;max-width:920px}
+.modal-info .badge-inline{display:inline-block;background:var(--gold);color:#fff;font-size:.72rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.modal-info h2{font-size:clamp(1.6rem,3.4vw,2.2rem);text-transform:uppercase}
+.modal-info .mloc{display:flex;align-items:center;gap:7px;color:var(--ink-soft);margin:8px 0 18px}
+.modal-info .mloc svg{width:16px;height:16px;color:var(--gold)}
+.mprice{font-family:'Archivo';font-weight:800;font-size:1.7rem;color:var(--ink)}
+.mprice small{display:block;font-family:'Inter';font-weight:600;font-size:.74rem;color:var(--gold);
+  text-transform:uppercase;letter-spacing:.08em}
+.mspecs{display:flex;gap:26px;flex-wrap:wrap;margin:22px 0;padding:20px 0;border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)}
+.mspec{display:flex;align-items:center;gap:9px}
+.mspec svg{width:22px;height:22px;color:var(--gold)}
+.mspec b{font-family:'Archivo';font-size:1.05rem}
+.mspec small{display:block;font-size:.74rem;color:var(--ink-soft)}
+.modal-info h3{font-size:1.1rem;text-transform:uppercase;margin:26px 0 14px;letter-spacing:.03em}
+.modal-info p.desc{color:var(--ink-soft)}
+.feats{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-top:6px}
+.feats li{display:flex;align-items:flex-start;gap:10px;color:var(--ink-soft);font-size:.95rem}
+.feats svg{width:18px;height:18px;color:var(--gold);flex:none;margin-top:3px}
+.mmap{margin-top:26px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.mmap iframe{width:100%;height:300px;border:0;display:block}
+.modal-cta{position:absolute;left:0;right:0;bottom:0;background:rgba(248,245,239,.96);backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);padding:16px clamp(20px,4vw,46px);display:flex;align-items:center;
+  justify-content:space-between;gap:16px;z-index:8}
+.modal-cta .mc-price{font-family:'Archivo';font-weight:800;font-size:1.2rem}
+.modal-cta .mc-price small{font-family:'Inter';font-weight:500;font-size:.74rem;color:var(--ink-soft);display:block}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-copy{padding-bottom:30px}
+  .hero-media{height:420px;max-width:460px;margin:0 auto}
+  .services-card{grid-template-columns:1fr 1fr}
+  .svc:nth-child(2){border-right:0}
+  .svc:nth-child(1),.svc:nth-child(2){border-bottom:1px solid var(--line)}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .stat:nth-child(2)::after{display:none}
+  .props-grid{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-photo{max-width:420px;margin:0 auto}
+  .why-grid{grid-template-columns:1fr;gap:34px}
+  .steps{grid-template-columns:1fr 1fr 1fr;gap:30px 14px}
+  .steps::before{display:none}
+  .sim-card{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .ig-grid{grid-template-columns:1fr 1fr}
+  .cta-grid{grid-template-columns:1fr;text-align:center}
+  .cta-photo{max-width:280px;margin:0 auto}
+  .cta-points{align-items:center}
+  .foot-grid{grid-template-columns:1fr}
+  .gallery{max-height:40vh}
+}
+@media(max-width:680px){
+  .nav-links,.nav-cta .btn-outline{display:none}
+  .burger{display:flex}
+  .nav-links.mobile{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+    background:var(--cream-2);padding:18px 24px;gap:6px;box-shadow:var(--shadow-sm)}
+  .nav-links.mobile a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .props-grid,.why-list,.ig-grid{grid-template-columns:1fr}
+  .steps,.sim-card{grid-template-columns:1fr}
+  .mspecs{gap:18px}
+  .feats{grid-template-columns:1fr}
+  .modal-cta{flex-direction:column;align-items:stretch}
+  .modal-cta .mc-price{text-align:center}
+  .section{padding:70px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header id="header">
+  <nav class="wrap nav">
+    <a href="#inicio" class="brand"><img src="assets/logo-danda.png" alt="Danda Corretora de Imóveis"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#imoveis">Imóveis</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-wa" data-wa="Olá Danda! Vim pelo seu site e gostaria de mais informações.">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Encontre o imóvel</span>
+      <h1>Dos seus<span class="line2">sonhos</span></h1>
+      <p class="sub">Compra, venda e locação na Zona Leste de São Paulo com atendimento próximo, do primeiro contato à entrega das chaves.</p>
+      <ul class="hero-benefits">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Atendimento personalizado</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Imóveis selecionados</li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Segurança em cada negociação</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-gold" data-wa="Olá Danda! Quero encontrar o imóvel ideal para mim. Pode me ajudar?">Falar com a corretora</a>
+        <a class="btn btn-outline" href="#imoveis">Ver imóveis disponíveis</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="assets/danda-retrato.png" alt="Danda, corretora de imóveis">
+    </div>
+  </div>
+
+  <!-- service strip -->
+  <div class="wrap services" id="servicos">
+    <div class="services-card">
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l9-8 9 8M5 9v11h14V9"/></svg></div>
+        <h3>Compra</h3><p>Encontre o imóvel ideal para o seu perfil e momento.</p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Venda</h3><p>Avaliação estratégica e divulgação profissional do seu imóvel.</p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V7l8-4 8 4v14M9 21v-6h6v6"/></svg></div>
+        <h3>Locação</h3><p>Opções seguras para morar ou investir com tranquilidade.</p>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9l-3 3m8.5-1.5a4.6 4.6 0 01-6.4 0l-1.5 1.5a4.6 4.6 0 01-6.5-6.5L6 4m12 12l2 2m-9-9l5-5"/></svg></div>
+        <h3>Assessoria</h3><p>Documentação e negociação completas, do início ao fim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS ========== -->
+<!-- NOTA p/ a Danda: confirme/ajuste estes números antes de publicar (são sugestões). -->
+<section class="stats">
+  <div class="wrap stats-grid reveal">
+    <div class="stat"><div class="num">+250</div><div class="lbl">Famílias atendidas</div></div>
+    <div class="stat"><div class="num">98%</div><div class="lbl">Clientes satisfeitos</div></div>
+    <div class="stat"><div class="num">+180</div><div class="lbl">Imóveis negociados</div></div>
+    <div class="stat"><div class="num">8 anos</div><div class="lbl">De experiência</div></div>
+  </div>
+</section>
+
+<!-- ========== IMÓVEIS ========== -->
+<section class="section" id="imoveis">
+  <div class="wrap">
+    <div class="head-center reveal">
+      <span class="eyebrow center">Imóveis em destaque</span>
+      <h2 class="section-title">Oportunidades <span class="accent">selecionadas</span> para você</h2>
+      <p class="lead">Apartamentos novos na Zona Leste de São Paulo. Clique no imóvel para ver as fotos, detalhes e mapa — e agende sua visita pelo WhatsApp.</p>
+    </div>
+    <div class="props-grid" id="propsGrid"></div>
+    <div class="props-foot reveal">
+      <a class="btn btn-ghost-gold" data-wa="Olá Danda! Vi os imóveis no site e quero conhecer outras opções disponíveis.">Quer ver mais opções? Fale comigo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SOBRE ========== -->
+<section class="section tint about" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <span class="frame"></span>
+      <img src="assets/danda-retrato.png" alt="Danda, corretora de imóveis">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Sobre a corretora</span>
+      <h2>Muito prazer, eu sou a <em>Danda</em>.</h2>
+      <p>Meu objetivo é tornar a compra do seu imóvel uma experiência tranquila, segura e sem complicações. Sou especialista em Minha Casa Minha Vida e ajudo cada cliente a realizar o sonho da casa própria com facilidade.</p>
+      <p>Acompanho você desde a escolha do imóvel até a assinatura do contrato, sempre buscando as melhores oportunidades e condições do mercado para o seu perfil.</p>
+      <div class="signed">Danda</div>
+      <div class="creci">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Corretora registrada · CRECI 299420
+      </div>
+      <div class="about-actions">
+        <a class="btn btn-gold" data-wa="Olá Danda! Gostei do seu trabalho e quero conversar com você.">Conversar comigo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POR QUE ESCOLHER ========== -->
+<section class="section why">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <span class="eyebrow">Por que escolher a Danda?</span>
+      <h2 class="section-title">Experiência, confiança<br><span class="accent">e resultados</span></h2>
+      <p class="lead" style="margin-top:18px">Trabalho com dedicação para realizar sonhos e construir relações duradouras. Meu compromisso é com você.</p>
+      <div class="about-actions" style="margin-top:26px">
+        <a class="btn btn-outline" data-wa="Olá Danda! Quero entender como você pode me ajudar.">Quero saber mais</a>
+      </div>
+    </div>
+    <div class="why-list reveal">
+      <div class="why-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zm14 10v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h4>Atendimento personalizado</h4>
+        <p>Entendo suas necessidades e encontro o imóvel certo para o seu momento.</p>
+      </div>
+      <div class="why-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4m-3-7l7 3v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/></svg></div>
+        <h4>Transparência e segurança</h4>
+        <p>Processos claros e seguros em todas as etapas da negociação.</p>
+      </div>
+      <div class="why-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18M7 14l3-4 4 3 5-7"/></svg></div>
+        <h4>Expertise no mercado</h4>
+        <p>Conhecimento profundo da Zona Leste para as melhores negociações.</p>
+      </div>
+      <div class="why-item">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 10-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h4>Pós-venda e suporte</h4>
+        <p>Acompanhamento completo, inclusive depois da entrega das chaves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROCESSO ========== -->
+<section class="section">
+  <div class="wrap">
+    <div class="head-center reveal">
+      <span class="eyebrow center">Como funciona</span>
+      <h2 class="section-title">Comprar um imóvel <span class="accent">pode ser simples</span></h2>
+      <p class="lead">Um caminho claro, do primeiro "olá" até o dia em que você recebe as chaves.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="dot">1</div><h4>Conversamos</h4><p>Você me chama no WhatsApp.</p></div>
+      <div class="step"><div class="dot">2</div><h4>Entendo você</h4><p>Seu perfil e necessidade.</p></div>
+      <div class="step"><div class="dot">3</div><h4>Seleciono</h4><p>Os melhores imóveis.</p></div>
+      <div class="step"><div class="dot">4</div><h4>Visitamos</h4><p>Agendamos as visitas.</p></div>
+      <div class="step"><div class="dot">5</div><h4>Negociamos</h4><p>As melhores condições.</p></div>
+      <div class="step"><div class="dot">6</div><h4>As chaves</h4><p>Seu novo lar é seu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SIMULADOR ========== -->
+<section class="section sim">
+  <div class="wrap">
+    <div class="head-center reveal">
+      <span class="eyebrow center">Simulador</span>
+      <h2 class="section-title">Vamos encontrar <span style="color:var(--gold)">seu imóvel</span></h2>
+      <p class="lead">Conte o que procura. Em um clique, a mensagem já chega pronta no meu WhatsApp.</p>
+    </div>
+    <div class="sim-card reveal">
+      <div class="field">
+        <label for="simTipo">Quero</label>
+        <select id="simTipo"><option>Comprar</option><option>Alugar</option></select>
+      </div>
+      <div class="field">
+        <label for="simCidade">Bairro / Região</label>
+        <input id="simCidade" type="text" placeholder="Ex.: Vila Carrão, Mooca…">
+      </div>
+      <div class="field">
+        <label for="simValor">Valor máximo</label>
+        <select id="simValor">
+          <option>Até R$ 250 mil</option><option>Até R$ 350 mil</option>
+          <option>Até R$ 500 mil</option><option>Acima de R$ 500 mil</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="simQuartos">Dormitórios</label>
+        <select id="simQuartos"><option>1 dormitório</option><option>2 dormitórios</option><option>3+ dormitórios</option></select>
+      </div>
+      <button class="btn btn-wa" id="simBtn">Encontrar opções</button>
+    </div>
+    <p class="sim-note">Sem formulários longos e sem compromisso — você fala direto comigo.</p>
+  </div>
+</section>
+
+<!-- ========== DEPOIMENTOS ========== -->
+<!-- NOTA p/ a Danda: substitua por depoimentos reais de clientes (prints/textos do WhatsApp). -->
+<section class="section tint" id="depoimentos">
+  <div class="wrap">
+    <div class="head-center reveal">
+      <span class="eyebrow center">Depoimentos</span>
+      <h2 class="section-title">Quem realizou o sonho <span class="accent">com a Danda</span></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Comprei meu primeiro apartamento e a Danda explicou cada passo. Me senti segura do começo ao fim."</p>
+        <div class="who"><span class="av">A</span><div><b>Cliente Danda</b><small>Vila Carrão · SP</small></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Atendimento rápido e honesto. Achou exatamente o que eu procurava dentro do meu orçamento."</p>
+        <div class="who"><span class="av">R</span><div><b>Cliente Danda</b><small>Mooca · SP</small></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Usei o FGTS como entrada e ela cuidou de toda a documentação. Recomendo de olhos fechados."</p>
+        <div class="who"><span class="av">J</span><div><b>Cliente Danda</b><small>Vila Ré · SP</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INSTAGRAM ========== -->
+<!-- NOTA p/ a Danda: troque estas imagens por prints reais dos posts (assets) ou um widget de embed. -->
+<section class="section ig">
+  <div class="wrap">
+    <div class="head-center reveal">
+      <span class="eyebrow center">No Instagram</span>
+      <h2 class="section-title">Acompanhe os <span class="accent">novos imóveis</span></h2>
+      <p class="lead">Lançamentos, bastidores e dicas no perfil @danda.corretoradeimoveis.</p>
+    </div>
+    <div class="ig-grid reveal">
+      <a class="ig-tile" href="https://www.instagram.com/danda.corretoradeimoveis" target="_blank" rel="noopener"><img src="assets/imoveis/ribeirao-branco-1.jpg" alt="Post Instagram"><span class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span></a>
+      <a class="ig-tile" href="https://www.instagram.com/danda.corretoradeimoveis" target="_blank" rel="noopener"><img src="assets/imoveis/antonio-alberto-1.jpg" alt="Post Instagram"><span class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span></a>
+      <a class="ig-tile" href="https://www.instagram.com/danda.corretoradeimoveis" target="_blank" rel="noopener"><img src="assets/imoveis/forte-ernesto-1.jpg" alt="Post Instagram"><span class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span></a>
+      <a class="ig-tile" href="https://www.instagram.com/danda.corretoradeimoveis" target="_blank" rel="noopener"><img src="assets/imoveis/ribeirao-branco-5.jpg" alt="Post Instagram"><span class="ov"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span></a>
+    </div>
+    <div style="text-align:center">
+      <a class="ig-handle" href="https://www.instagram.com/danda.corretoradeimoveis" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        @danda.corretoradeimoveis
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="section">
+  <div class="wrap">
+    <div class="head-center reveal">
+      <span class="eyebrow center">Perguntas frequentes</span>
+      <h2 class="section-title">Tudo que você <span class="accent">precisa saber</span></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <div class="faq-item">
+        <button class="faq-q">Posso financiar o imóvel? <span class="pm">+</span></button>
+        <div class="faq-a"><p>Sim. Trabalho com imóveis dentro do Minha Casa Minha Vida e te oriento sobre as melhores condições de financiamento para o seu perfil, simulando as parcelas antes de qualquer decisão.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Vocês ajudam com a documentação? <span class="pm">+</span></button>
+        <div class="faq-a"><p>Acompanho toda a parte burocrática: análise de crédito, reunião de documentos, contrato e assinatura. Você não fica sozinho em nenhuma etapa.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso usar o FGTS como entrada? <span class="pm">+</span></button>
+        <div class="faq-a"><p>Em muitos casos, sim. Vários imóveis aceitam o FGTS como parte da entrada. Me chame no WhatsApp que avalio a sua situação específica.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quanto custa falar com você? <span class="pm">+</span></button>
+        <div class="faq-a"><p>Nada. A consultoria para encontrar e comprar o seu imóvel é gratuita — você fala diretamente comigo, sem intermediários.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como funciona a visita aos imóveis? <span class="pm">+</span></button>
+        <div class="faq-a"><p>Combinamos um horário pelo WhatsApp e visitamos juntos as opções que mais combinam com o que você procura, sem pressa e sem pressão.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA FINAL ========== -->
+<section class="cta" id="contato">
+  <div class="wrap" style="padding-top:72px;padding-bottom:72px">
+    <div class="cta-grid">
+      <div class="cta-photo reveal"><img src="assets/danda-retrato.png" alt="Danda, corretora de imóveis"></div>
+      <div class="cta-mid reveal">
+        <span class="eyebrow">Vamos conversar?</span>
+        <h2>Estou aqui para te ajudar<br><span class="accent">a encontrar o melhor negócio</span></h2>
+        <p>Fale diretamente comigo pelo WhatsApp e receba atendimento rápido e personalizado. Sem formulários, sem burocracia.</p>
+        <ul class="cta-points">
+          <li><span class="tick"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Tire suas dúvidas</li>
+          <li><span class="tick"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Receba opções exclusivas</li>
+          <li><span class="tick"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Agende uma visita</li>
+        </ul>
+      </div>
+      <div class="cta-right reveal">
+        <div class="ring"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.607z"/></svg></div>
+        <h3>Clique no botão e<br>fale comigo agora</h3>
+        <a class="btn btn-wa" data-wa="Olá Danda! Quero falar com você sobre imóveis.">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img src="assets/logo-danda.png" alt="Danda Corretora de Imóveis">
+      <p>Compra, venda e locação de imóveis na Zona Leste de São Paulo. Especialista em Minha Casa Minha Vida.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Contato</h4>
+      <a data-wa="Olá Danda! Vim pelo site.">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+        (11) 99988-8501
+      </a>
+      <a href="https://www.instagram.com/danda.corretoradeimoveis" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        @danda.corretoradeimoveis
+      </a>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        CRECI 299420
+      </span>
+    </div>
+    <div class="foot-col">
+      <h4>Navegação</h4>
+      <a href="#inicio">Início</a>
+      <a href="#imoveis">Imóveis</a>
+      <a href="#sobre">Sobre a Danda</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span id="year"></span> Danda · Corretora de Imóveis. Todos os direitos reservados.</span>
+    <span>CRECI 299420 · São Paulo / SP</span>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<a class="wa-float" data-wa="Olá Danda! Vim pelo seu site e gostaria de mais informações." aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+<button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+    <div class="modal-scroll" id="modalScroll">
+      <div class="gallery">
+        <img class="main" id="gMain" src="" alt="">
+        <button class="gnav prev" id="gPrev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="gnav next" id="gNext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        <span class="gcount" id="gCount"></span>
+      </div>
+      <div class="thumbs" id="gThumbs"></div>
+      <div class="modal-info" id="modalInfo"></div>
+    </div>
+    <div class="modal-cta">
+      <div class="mc-price" id="mcPrice"></div>
+      <a class="btn btn-wa" id="mcBtn">Agendar visita pelo WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const WA = "5511999888501";
+const wa = txt => `https://wa.me/${WA}?text=${encodeURIComponent(txt)}`;
+
+// wire every [data-wa]
+document.querySelectorAll('[data-wa]').forEach(el=>{
+  el.setAttribute('href', wa(el.getAttribute('data-wa')));
+  el.setAttribute('target','_blank'); el.setAttribute('rel','noopener');
+});
+
+/* ---------- DADOS DOS IMÓVEIS ---------- */
+const ICON = {
+  bed:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 17v-5a2 2 0 012-2h16a2 2 0 012 2v5M2 17h20M4 10V7a2 2 0 012-2h12a2 2 0 012 2v3"/></svg>',
+  bath:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12V5a2 2 0 012-2 2 2 0 012 2M4 12h17v3a4 4 0 01-4 4H8a4 4 0 01-4-4v-3zM6 19l-1 2m13-2l1 2"/></svg>',
+  car:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 13l1.5-4.5A2 2 0 018.4 7h7.2a2 2 0 011.9 1.5L19 13m-14 0h14m-14 0v4m14-4v4M7 17h.01M17 17h.01"/></svg>',
+  area:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3h7v7H3zM14 14h7v7h-7zM14 3l7 7M3 14l7 7"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>',
+  cam:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h2l2-2h10l2 2h2v12H3z"/><circle cx="12" cy="13" r="3"/></svg>'
+};
+
+const IMOVEIS = [
+  {
+    id:'forte', badge:'À venda', title:'Apartamento · Vila Carrão',
+    addr:'R. Forte Ernesto, 36 — Vila Carrão, São Paulo',
+    maps:'R. Forte Ernesto, 36, Vila Carrão, São Paulo, SP',
+    price:'R$ 215.000', priceNote:'A partir de',
+    dorms:'1 e 2', baths:'1', vagas:'—', area:'32 m²',
+    desc:'Apartamentos compactos e bem distribuídos na divisa da Vila Carrão com a Vila Ré, em nome da construtora. Excelente localização próxima à Avenida Itinguçu, com fácil acesso ao metrô Patriarca, mercados, farmácias, escolas, academias e comércio. Ótima oportunidade para morar ou investir na Zona Leste.',
+    feats:['Opções com 1 e 2 dormitórios','Unidades térreas com quintal','Condomínio baixo','Imóvel em nome da construtora','Próximo ao metrô Patriarca'],
+    photos:['forte-ernesto-1','forte-ernesto-2','forte-ernesto-3','forte-ernesto-4','forte-ernesto-5']
+  },
+  {
+    id:'antonio', badge:'À venda', title:'Apartamento novo · Vila Ré',
+    addr:'Praça Antônio Alberto, 11 — Vila Ré, São Paulo',
+    maps:'Praça Antônio Alberto, 11, Vila Ré, São Paulo, SP',
+    price:'R$ 245.000', priceNote:'Valor',
+    dorms:'2', baths:'1', vagas:'Sem vaga', area:'39 m²',
+    desc:'Apartamento novo na Vila Ré, próximo à estação de metrô, com fácil acesso à Radial Leste e cercado por mercados, padarias, farmácias, escolas e comércio. Entra no programa Minha Casa Minha Vida e aceita FGTS como entrada — ótima opção para quem busca praticidade, mobilidade e um imóvel novo para morar ou investir.',
+    feats:['2 dormitórios','Imóvel novo','Aceita FGTS como entrada','Minha Casa Minha Vida','Sem vaga e sem elevador','Próximo ao metrô'],
+    photos:['antonio-alberto-1','antonio-alberto-2','antonio-alberto-3','antonio-alberto-4','antonio-alberto-5']
+  },
+  {
+    id:'ribeirao', badge:'À venda', title:'Apartamento · Mooca',
+    addr:'Rua Ribeirão Branco, 521 — Mooca, São Paulo',
+    maps:'Rua Ribeirão Branco, 521, Mooca, São Paulo, SP',
+    price:'Sob consulta', priceNote:'Minha Casa Minha Vida',
+    dorms:'2', baths:'1', vagas:'Com e sem', area:'Sacada',
+    desc:'Empreendimento moderno na Mooca com 7 andares e elevador. Unidades de 2 dormitórios, sendo as de frente com suíte, todas com sacada e cinco tipos de plantas diferentes. Conta com salão de festas, documentação pronta para financiamento e padaria em frente ao projeto. Plano Minha Casa Minha Vida.',
+    feats:['2 dormitórios (frente com suíte)','Todas as unidades com sacada','7 andares com elevador','Salão de festas','Cinco tipos de plantas','Opções com e sem vaga','Documentação pronta para financiamento','Padaria em frente ao projeto'],
+    photos:['ribeirao-branco-1','ribeirao-branco-2','ribeirao-branco-3','ribeirao-branco-4','ribeirao-branco-5']
+  },
+  {
+    id:'angical', badge:'À venda', title:'Apartamento · Carrão',
+    addr:'Rua Angical, 47 — Carrão, São Paulo',
+    maps:'Rua Angical, 47, Carrão, São Paulo, SP',
+    price:'R$ 280.000', priceNote:'A partir de',
+    dorms:'2', baths:'1', vagas:'À parte', area:'39–47 m²',
+    desc:'Condomínio exclusivo com apenas 7 unidades na Rua Angical, no Carrão. Todas as unidades com 2 dormitórios, opções com quintal privativo (frente, fundos e quintal) e segurança reforçada com câmeras e cerca elétrica. Vaga de garagem disponível à parte.',
+    feats:['Todas com 2 dormitórios','Opções com quintal privativo','Condomínio com apenas 7 unidades','Câmeras de segurança','Cerca elétrica','Unidades frente, fundos e quintal'],
+    priceTable:[['39,58 m²','a partir de R$ 280.000'],['45,97 m²','a partir de R$ 350.000'],['47,68 m²','a partir de R$ 350.000'],['Vaga de garagem','R$ 40.000 (à parte)']],
+    photos:['angical-1','angical-2','angical-3','angical-4','angical-5']
+  }
+];
+
+const spec = (ic,val,lbl)=>`<span>${ICON[ic]}${val}${lbl?' '+lbl:''}</span>`;
+
+/* ---------- CARDS ---------- */
+const grid = document.getElementById('propsGrid');
+IMOVEIS.forEach((im,i)=>{
+  const card=document.createElement('div');
+  card.className='prop-card reveal';
+  card.style.transitionDelay=(i*60)+'ms';
+  card.innerHTML=`
+    <div class="prop-thumb">
+      <span class="badge">${im.badge}</span>
+      <span class="count">${ICON.cam}${im.photos.length} fotos</span>
+      <img src="assets/imoveis/${im.photos[0]}.jpg" alt="${im.title}" loading="lazy">
+    </div>
+    <div class="prop-body">
+      <h3>${im.title}</h3>
+      <div class="prop-loc">${ICON.pin}${im.addr.split('—')[1]?im.addr.split('—')[1].trim():im.addr}</div>
+      <div class="prop-specs">
+        ${spec('bed',im.dorms,'dorm.')}
+        ${spec('bath',im.baths,'banh.')}
+        ${spec('area',im.area,'')}
+      </div>
+      <div class="prop-price"><small>${im.priceNote}</small>${im.price}</div>
+      <div class="prop-more">Ver detalhes ${ICON.check.replace('M20 6L9 17l-5-5','M5 12h14M13 6l6 6-6 6')}</div>
+    </div>`;
+  card.addEventListener('click',()=>openModal(i));
+  grid.appendChild(card);
+});
+
+/* ---------- MODAL ---------- */
+const modal=document.getElementById('modal');
+const gMain=document.getElementById('gMain');
+const gThumbs=document.getElementById('gThumbs');
+const gCount=document.getElementById('gCount');
+const modalInfo=document.getElementById('modalInfo');
+const mcPrice=document.getElementById('mcPrice');
+const mcBtn=document.getElementById('mcBtn');
+const modalScroll=document.getElementById('modalScroll');
+let cur=0, gi=0;
+
+function renderGallery(){
+  const im=IMOVEIS[cur];
+  gMain.src=`assets/imoveis/${im.photos[gi]}.jpg`;
+  gCount.textContent=`${gi+1} / ${im.photos.length}`;
+  [...gThumbs.children].forEach((t,k)=>t.classList.toggle('active',k===gi));
+}
+function openModal(i){
+  cur=i; gi=0;
+  const im=IMOVEIS[i];
+  // thumbs
+  gThumbs.innerHTML='';
+  im.photos.forEach((p,k)=>{
+    const t=document.createElement('img');
+    t.src=`assets/imoveis/${p}.jpg`; t.alt='';
+    t.addEventListener('click',()=>{gi=k;renderGallery()});
+    gThumbs.appendChild(t);
+  });
+  // info
+  const priceTable = im.priceTable ? `
+    <h3>Valores</h3>
+    <ul class="feats">${im.priceTable.map(r=>`<li>${ICON.check}<span><b style="font-family:Archivo">${r[0]}</b> — ${r[1]}</span></li>`).join('')}</ul>` : '';
+  modalInfo.innerHTML=`
+    <span class="badge-inline">${im.badge}</span>
+    <h2>${im.title}</h2>
+    <div class="mloc">${ICON.pin}${im.addr}</div>
+    <div class="mprice"><small>${im.priceNote}</small>${im.price}</div>
+    <div class="mspecs">
+      <div class="mspec">${ICON.bed}<div><b>${im.dorms}</b><small>Dormitórios</small></div></div>
+      <div class="mspec">${ICON.bath}<div><b>${im.baths}</b><small>Banheiro</small></div></div>
+      <div class="mspec">${ICON.car}<div><b>${im.vagas}</b><small>Vaga</small></div></div>
+      <div class="mspec">${ICON.area}<div><b>${im.area}</b><small>Área</small></div></div>
+    </div>
+    <h3>Sobre o imóvel</h3>
+    <p class="desc">${im.desc}</p>
+    <h3>Diferenciais</h3>
+    <ul class="feats">${im.feats.map(f=>`<li>${ICON.check}<span>${f}</span></li>`).join('')}</ul>
+    ${priceTable}
+    <h3>Localização</h3>
+    <div class="mmap"><iframe loading="lazy" src="https://www.google.com/maps?q=${encodeURIComponent(im.maps)}&output=embed"></iframe></div>`;
+  // cta
+  mcPrice.innerHTML=`<small>${im.priceNote}</small>${im.price}`;
+  mcBtn.setAttribute('href', wa(`Olá Danda! Tenho interesse no imóvel "${im.title}" (${im.addr}). Pode me passar mais informações e agendar uma visita?`));
+  mcBtn.setAttribute('target','_blank'); mcBtn.setAttribute('rel','noopener');
+  renderGallery();
+  modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden'; modalScroll.scrollTop=0;
+}
+function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+document.getElementById('modalClose').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.getElementById('gPrev').addEventListener('click',()=>{const n=IMOVEIS[cur].photos.length;gi=(gi-1+n)%n;renderGallery()});
+document.getElementById('gNext').addEventListener('click',()=>{const n=IMOVEIS[cur].photos.length;gi=(gi+1)%n;renderGallery()});
+document.addEventListener('keydown',e=>{
+  if(!modal.classList.contains('open'))return;
+  if(e.key==='Escape')closeModal();
+  if(e.key==='ArrowRight')document.getElementById('gNext').click();
+  if(e.key==='ArrowLeft')document.getElementById('gPrev').click();
+});
+
+/* ---------- SIMULADOR ---------- */
+document.getElementById('simBtn').addEventListener('click',()=>{
+  const tipo=document.getElementById('simTipo').value.toLowerCase();
+  const cidade=document.getElementById('simCidade').value.trim()||'São Paulo';
+  const valor=document.getElementById('simValor').value;
+  const q=document.getElementById('simQuartos').value;
+  const msg=`Olá Danda! Procuro um imóvel para ${tipo} em ${cidade}, ${valor.toLowerCase()}, com ${q}. Pode me ajudar a encontrar opções?`;
+  window.open(wa(msg),'_blank');
+});
+
+/* ---------- FAQ ---------- */
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const a=item.querySelector('.faq-a');
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(it=>{it.classList.remove('open');it.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  });
+});
+
+/* ---------- HEADER / SCROLL ---------- */
+const header=document.getElementById('header');
+const toTop=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  header.classList.toggle('scrolled',y>40);
+  toTop.classList.toggle('show',y>600);
+});
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* mobile menu */
+const burger=document.getElementById('burger');
+const navLinks=document.getElementById('navLinks');
+burger.addEventListener('click',()=>navLinks.classList.toggle('mobile'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('mobile')));
+
+/* ---------- REVEAL ---------- */
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
